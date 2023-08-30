@@ -1,0 +1,30 @@
+1. Instalamos el paquete de Great Expectations:
+    - pip install great_expectations
+    
+2. En la raiz de un proyecto de Airflow dentro de la carpeta "include" se corre el comando para iniciar el proyecto de great expectations:
+    - great_expectations init
+   
+3. Podemos utilizar un script para crear una Suite o sino copiar el JSON de una Suite ya creada desde la carpeta great_expectations/expectations de un proyecto ya iniciado.
+
+4. Instalamos el paquete provider para GX [ airflow-provider-great-expectations==0.2.6 ] y lo agregamos en nuestros requirements.txt.
+
+5. Creamos un dag que utilice el operador de GX que requiere una Connection de Airflow (por el momento solo soporta SQL).
+    Ejemplo de un Operador GX:
+    
+        from great_expectations_provider.operators.great_expectations import (
+            GreatExpectationsOperator,
+        )
+
+        gx_validate = GreatExpectationsOperator(
+            task_id="gx_validate",
+            conn_id=CONN_ID, # Connection de Airflow
+            data_context_root_dir="include/great_expectations", # Se puede especificar otro directorio para el proyecto de GX
+            data_asset_name="salary", # Nombre de la tabla real
+            query_to_validate="SELECT * FROM salary", # Aclarar el "SELECT" ya que tiene un problema interpretando el nombre de la base y tabla (db.table)  
+            schema="test", # La base de datos
+            expectation_suite_name="salary_expectation_suite", # Nombre de la Suite
+            return_json_dict=True,
+        )
+        
+        
+6. El operador fallara si no cumple con todas las expectativas y tambien se creara un Docs detallando los resultados
