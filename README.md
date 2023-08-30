@@ -1,10 +1,9 @@
-# setup-great-expectations
+# Charla: Data Quality + Great Expectations
 - Charla sobre Data Quality
 - Codigo explicando como arrancar a utilizar Great Expectations y como implementarlo en Airflow.
 
 
-## Abrir el archivo GreatExpectations.ipynb con Jupyter Notebooks/Lab. 
-## Ahi se explican las formas basicas para arrancar a usar Great Expectation.
+### Abrir el archivo GreatExpectations.ipynb con Jupyter Notebooks/Lab. Ahi se explican las formas basicas para arrancar a usar Great Expectation.
 
 ### Forma manual:
 1. Establecer un Data Context
@@ -22,5 +21,4 @@
 
 ### Tambien se explica como generar los documentos para ver los resultados y como editar una Suite.
 
-## Una vez que se entiende el concepto de GX, segun la necesidad de implementarlo en Airflow los pasos a seguir se encuentran en SetupAirflowGX.txt .
-### Pero tambien se puede implementar con un operador normal de Airflow y el codigo clasico de GX
+### Una vez que se entiende el concepto de GX, segun la necesidad de implementarlo en Airflow los pasos a seguir se encuentran en SetupAirflowGX.txt . Pero tambien se puede implementar con un operador normal de Airflow y el codigo clasico de GX
