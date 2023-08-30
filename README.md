@@ -6,10 +6,10 @@
 Abrir el archivo GreatExpectations.ipynb con Jupyter Notebooks/Lab. 
 Ahi se explican las formas basicas para arrancar a usar Great Expectation.
   Forma manual:
-  /n  1. Establecer un Data Context
-  /n  2. Definir una fuente de datos (datasource)
-  /n  3. Definir / Crear Expectativas
-  /n  4. Correr un Checkpoint de las validaciones
+      1. Establecer un Data Context
+      2. Definir una fuente de datos (datasource)
+      3. Definir / Crear Expectativas
+      4. Correr un Checkpoint de las validaciones
     
   Forma automatica:
     1. Establecer un Data Context
