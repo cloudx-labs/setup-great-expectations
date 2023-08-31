@@ -2,7 +2,7 @@
 - Charla sobre Data Quality
 - Codigo explicando como arrancar a utilizar Great Expectations y como implementarlo en Airflow.
 
-### En GreatExpectations se pueden encontrar mas de 50 expectativas basicas y muchas mas especializadas hechas por la comunidad. [Mira aca] (https://greatexpectations.io/expectations/?filterType=Package&viewType=Summary&showFilters=true&subFilterValues=core)
+### En GreatExpectations se pueden encontrar mas de 50 expectativas basicas y muchas mas especializadas hechas por la comunidad. [Mira aca](https://greatexpectations.io/expectations/?filterType=Package&viewType=Summary&showFilters=true&subFilterValues=core)
 
 ### Abrir el archivo GreatExpectations.ipynb con Jupyter Notebooks/Lab. Ahi se explican las formas basicas para arrancar a usar Great Expectation.
 
